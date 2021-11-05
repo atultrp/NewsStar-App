@@ -20,25 +20,22 @@ export class Navbar extends Component {
                                     <a className="nav-link" aria-current="page" href="/">Home</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" aria-current="page" href="/">business</a>
+                                    <a className="nav-link" aria-current="business" href="/">business</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" aria-current="page" href="/">entertainment</a>
+                                    <a className="nav-link" aria-current="entertainment" href="/">entertainment</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" aria-current="page" href="/">general</a>
+                                    <a className="nav-link" aria-current="health" href="/">health</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" aria-current="page" href="/">health</a>
+                                    <a className="nav-link" aria-current="science" href="/">science</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" aria-current="page" href="/">science</a>
+                                    <a className="nav-link" aria-current="sports" href="/">sports</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" aria-current="page" href="/">sports</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" aria-current="page" href="/">technology</a>
+                                    <a className="nav-link" aria-current="technology" href="/">technology</a>
                                 </li>
 
                             </ul>
