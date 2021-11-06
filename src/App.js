@@ -6,9 +6,9 @@ import News from './components/News';
 
 import {
   BrowserRouter as Router,
-  Route,
+  // Route,
   // Switch,
-  Routes
+  // Routes
 } from "react-router-dom";
 
 export class App extends Component {
@@ -20,8 +20,8 @@ export class App extends Component {
       <Router>
         <div>
           <Navbar />
-          {/* <News key="general" country="in" category="general" pageSize={pageSize} /> */}
-          <Routes>
+          <News key="general" country="in" category="general" pageSize={pageSize} />
+          {/* <Routes>
             <Route exact path="/"><News key="general" country="in" category="general" pageSize={pageSize} /></Route>
             <Route exact path="/business"><News key="business" country="in" category="business" pageSize={pageSize} /></Route>
             <Route exact path="/entertainment"><News key="entertainment" country="in" category="entertainment" pageSize={pageSize} /></Route>
@@ -29,7 +29,7 @@ export class App extends Component {
             <Route exact path="/science"><News key="science" country="in" category="science" pageSize={pageSize} /></Route>
             <Route exact path="/sports"><News key="sports" country="in" category="sports" pageSize={pageSize} /></Route>
             <Route exact path="/technology"><News key="technology" country="in" category="technology" pageSize={pageSize} /></Route>
-          </Routes>
+          </Routes> */}
         </div>
       </Router>
     )
