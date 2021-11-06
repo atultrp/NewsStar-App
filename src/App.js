@@ -22,12 +22,13 @@ export class App extends Component {
           <Navbar />
           {/* <News key="general" country="in" category="general" pageSize={pageSize} /> */}
           <Switch>
-            <Route path="/business">
-            <News key="bussiness" country="in" category="bussiness" pageSize={pageSize} />
-            </Route>
-            <Route path="/">
-            <News key="general" country="in" category="general" pageSize={pageSize} />
-            </Route>
+            <Route exact path="/"><News key="general" country="in" category="general" pageSize={pageSize} /></Route>
+            <Route exact path="/business"><News key="business" country="in" category="business" pageSize={pageSize} /></Route>
+            <Route exact path="/entertainment"><News key="entertainment" country="in" category="entertainment" pageSize={pageSize} /></Route>
+            <Route exact path="/health"><News key="health" country="in" category="health" pageSize={pageSize} /></Route>
+            <Route exact path="/science"><News key="science" country="in" category="science" pageSize={pageSize} /></Route>
+            <Route exact path="/sports"><News key="sports" country="in" category="sports" pageSize={pageSize} /></Route>
+            <Route exact path="/technology"><News key="technology" country="in" category="technology" pageSize={pageSize} /></Route>
           </Switch>
         </div>
       </Router>
