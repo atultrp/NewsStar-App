@@ -18,14 +18,20 @@ export class News extends Component {
         category: PropTypes.string
     }
 
-    constructor() {
-        super();
+    capitalizeFuction= (string)=> {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+    
+    constructor(props) {
+        super(props);
         this.state = {
             articles: [],
             loading: false,
             page: 1
         }
+        document.title = `NewsStar - ${this.capitalizeFuction(this.props.category)}`
     }
+
 
     async updateNews() {
         let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=1ac1232bc7604eda8836ee0ee4b41ac2&category=${this.props.category}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
@@ -60,11 +66,11 @@ export class News extends Component {
     render() {
         return (
             <div className="container my-3">
-                <h1 className="text-center my-3">"{this.props.headlines}"</h1>
+                <h1 className="text-center my-3 headingTitle">Top {this.capitalizeFuction(this.props.category)} Headlines</h1>
                 {this.state.loading && <Loading className="justify-content-center" />}
                 <div className="row">
                     {!(this.state.loading) && this.state.articles.map(element => {
-                        return <div className="col-md-4 my-2" key={element.url}>
+                        return <div className="col-md-4 my-3" key={element.url}>
                             <NewsItems title={element.title} description={element.description} imgUrl={element.urlToImage} newsUrl={element.url} author={element.author} date={element.publishedAt} source={element.source.name} />
                         </div>
                     })}

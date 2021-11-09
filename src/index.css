@@ -1,6 +1,25 @@
 /* CSS Styling */
 
 @import url('https://fonts.googleapis.com/css2?family=Alice&family=Zen+Old+Mincho&display=swap');
-.navbar-brand {
-    font-family: 'Zen Old Mincho', serif;
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+.navbar {
+    /* font-family: 'Zen Old Mincho', serif; */
+    font-family: 'Merriweather', serif;
+}
+
+.headingTitle{
+    /* font-family: 'Zen Old Mincho', serif; */
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+}
+
+.card{
+    /* font-family: 'Zen Old Mincho', serif; */
+    font-family: 'Merriweather', serif;
+}
+
+.card-title{
+    /* font-family: 'Merriweather', serif; */
+    font-weight: bold;
 }
