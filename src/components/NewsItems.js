@@ -10,7 +10,7 @@ export class NewsItems extends Component {
                     <div className="card-body">
                         <h5 className="card-title">
                             {title ? ((title.length > 85) ? (title.slice(0, 86) + "...") : title) : title}
-                            <span className="position-absolute top-0 translate-middle badge rounded-pill bg-danger" style={{ left: "87%", zIndex: "1" }}>
+                            <span className="position-absolute top-0 translate-middle badge rounded-pill bg-danger" style={{ left: "50%", zIndex: "1" }}>
                                 <small>
                                     {source}
                                 </small>
