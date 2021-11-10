@@ -1,6 +1,6 @@
 import './App.css';
 
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import Navbar from './components/Navbar';
 import News from './components/News';
 import LoadingBar from 'react-top-loading-bar';
@@ -11,44 +11,34 @@ import {
   Routes
 } from "react-router-dom";
 
-export class App extends Component {
+const App = () => {
 
-  state = {
-    progress: 0
-  }
-
-  setProgress = (progress)=>{
-    this.setState({
-      progress: progress
-    })
-  }
+  const [progress, setProgress] = useState(0);
   
-  apiKey = process.env.REACT_APP_NEWS_API;
-  pageSize = 6;
+  const apiKey = process.env.REACT_APP_NEWS_API;
+  const pageSize = 6;
 
-  render() {
-    return (
-      <Router>
-        <div>
-          <Navbar />
-          <LoadingBar
-            color='#f11946'
-            height={3}
-            progress={this.state.progress}
-          />
-          <Routes>
-            <Route exact path="/" element={<News setProgress={this.setProgress} apiKey={this.apiKey} key="general" country="in" category="general" pageSize={this.pageSize} headlines="Today's Top Headlines" />} />
-            <Route exact path="/business" element={<News setProgress={this.setProgress} apiKey={this.apiKey} key="business" country="in" category="business" pageSize={this.pageSize} headlines="Business Headlines" />} />
-            <Route exact path="/entertainment" element={<News setProgress={this.setProgress} apiKey={this.apiKey} key="entertainment" country="in" category="entertainment" pageSize={this.pageSize} headlines="Entertainment Headlines" />} />
-            <Route exact path="/health" element={<News setProgress={this.setProgress} apiKey={this.apiKey} key="health" country="in" category="health" pageSize={this.pageSize} headlines="Health Headlines" />} />
-            <Route exact path="/science" element={<News setProgress={this.setProgress} apiKey={this.apiKey} key="science" country="in" category="science" pageSize={this.pageSize} headlines="Science Headlines" />} />
-            <Route exact path="/sports" element={<News setProgress={this.setProgress} apiKey={this.apiKey} key="sports" country="in" category="sports" pageSize={this.pageSize} headlines="Sports Headlines" />} />
-            <Route exact path="/technology" element={<News setProgress={this.setProgress} apiKey={this.apiKey} key="technology" country="in" category="technology" pageSize={this.pageSize} headlines="Technology Headlines" />} />
-          </Routes>
-        </div>
-      </Router>
-    )
-  }
+  return (
+    <Router>
+      <div>
+        <Navbar />
+        <LoadingBar
+          color='#f11946'
+          height={3}
+          progress={progress}
+        />
+        <Routes>
+          <Route exact path="/" element={<News setProgress={setProgress} apiKey={apiKey} key="general" country="in" category="general" pageSize={pageSize} headlines="Today's Top Headlines" />} />
+          <Route exact path="/business" element={<News setProgress={setProgress} apiKey={apiKey} key="business" country="in" category="business" pageSize={pageSize} headlines="Business Headlines" />} />
+          <Route exact path="/entertainment" element={<News setProgress={setProgress} apiKey={apiKey} key="entertainment" country="in" category="entertainment" pageSize={pageSize} headlines="Entertainment Headlines" />} />
+          <Route exact path="/health" element={<News setProgress={setProgress} apiKey={apiKey} key="health" country="in" category="health" pageSize={pageSize} headlines="Health Headlines" />} />
+          <Route exact path="/science" element={<News setProgress={setProgress} apiKey={apiKey} key="science" country="in" category="science" pageSize={pageSize} headlines="Science Headlines" />} />
+          <Route exact path="/sports" element={<News setProgress={setProgress} apiKey={apiKey} key="sports" country="in" category="sports" pageSize={pageSize} headlines="Sports Headlines" />} />
+          <Route exact path="/technology" element={<News setProgress={setProgress} apiKey={apiKey} key="technology" country="in" category="technology" pageSize={pageSize} headlines="Technology Headlines" />} />
+        </Routes>
+      </div>
+    </Router >
+  )
 }
 
 export default App
