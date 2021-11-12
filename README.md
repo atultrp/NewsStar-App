@@ -1,6 +1,15 @@
 # 📰️ NewsStar-App
 🗞️ NewsStar is a news app which can be used to grab quick daily news bites. If you are interested in news, weather, politics, entertainment, cryptocurrency, stocks and sports news, NewsStar is for you!
 
+## 💻️ Tech Included
+- HTML
+- CSS
+- JavaScript
+- React
+- Bootstrap
+- React Router
+- News API
+
 ## 👨🏻‍💻️ Creator
 Hey there, I'm Atul Tripathi from India. My passion for software lies with dreaming up ideas and making them come true with elegant interfaces. I take great care in the experience, architecture, and code quality of the things I build.
 I am also an open-source enthusiast and maintainer. I learned a lot from the open-source community and I love how collaboration and knowledge sharing happened through open-source.
