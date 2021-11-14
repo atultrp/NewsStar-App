@@ -1,6 +1,11 @@
 # 📰️ NewsStar-App
 🗞️ NewsStar is a news app which can be used to grab quick daily news bites. If you are interested in news, weather, politics, entertainment, cryptocurrency, stocks and sports news, NewsStar is for you!
 
+## 🌀️ Demo
+
+https://user-images.githubusercontent.com/69186169/141667842-55da67ba-c877-4916-ad0f-3fcab3a2ec28.mp4
+
+
 ## 💻️ Tech Included
 - HTML
 - CSS
